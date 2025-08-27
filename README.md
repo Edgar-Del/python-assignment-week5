@@ -1,4 +1,4 @@
-# 🐍 Python Assignment Week 5 - Object Oriented Programming
+# Python Assignment Week 5 - Object Oriented Programming
 
 This project demonstrates the fundamental concepts of Object Oriented Programming (OOP) in Python, including inheritance, encapsulation, and polymorphism.
 
@@ -12,7 +12,7 @@ python-assignment-week5/
 └── README.md              # This file
 ```
 
-## 🏗️ Activity 1: Design Your Own Class!
+## Activity 1: Design Your Own Class!
 
 ### Demonstrated Objectives:
 - **Inheritance**: The `Smartphone` class inherits from `ElectronicDevice`
@@ -31,7 +31,7 @@ python-assignment-week5/
 - ✅ Use applications (consumes battery)
 - ✅ Detailed device information
 
-## 🎭 Activity 2: Polymorphism Challenge!
+## Activity 2: Polymorphism Challenge!
 
 ### Demonstrated Objectives:
 - **Polymorphism**: Different implementations of the `move()` method
@@ -85,11 +85,11 @@ python polymorphism_challenge.py
 - Abstract class `Vehicle` defines common interface
 - Specific implementations in subclasses
 
-## 🎯 Output Examples
+## Output Examples
 
 ### Activity 1 - Smartphone:
 ```
-📱 Apple iPhone 15 (2024) - Status: Powered Off
+Apple iPhone 15 (2024) - Status: Powered Off
    OS: iOS 17
    Storage: 128GB
    RAM: 8GB
@@ -99,33 +99,8 @@ python polymorphism_challenge.py
 
 ### Activity 2 - Polymorphism:
 ```
-🚗 Ferrari F40 is driving at 100 km/h on the road!
-✈️ Boeing 747 is taking off on the runway at 250 km/h!
-🚢 Titanic is sailing at 30 km/h on the sea!
-🚴 Caloi 10 is pedaling at 25 km/h in gear 5!
+Ferrari F40 is driving at 100 km/h on the road!
+Boeing 747 is taking off on the runway at 250 km/h!
+Titanic is sailing at 30 km/h on the sea!
+Caloi 10 is pedaling at 25 km/h in gear 5!
 ```
-
-## 🔧 Requirements
-
-- Python 3.6+
-- No external libraries required
-
-## 📝 Implementation Notes
-
-- **Emojis**: Used to make output more visual and fun
-- **Documentation**: All classes and methods have explanatory docstrings
-- **Error Handling**: Basic validations implemented
-- **Clean Code**: Following Python best practices (PEP 8)
-
-## 🎓 Learning Outcomes
-
-This project demonstrates how to:
-1. **Organize code** using classes and inheritance
-2. **Reuse code** through inheritance
-3. **Implement polymorphism** for flexible behaviors
-4. **Encapsulate data** for better access control
-5. **Create consistent interfaces** with abstract classes
-
----
-
-**Developed with ❤️ to learn OOP in Python!**
