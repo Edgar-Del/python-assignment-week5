@@ -18,23 +18,23 @@ class Vehicle(ABC):
         new_speed = self.current_speed + increment
         if new_speed <= self.max_speed:
             self.current_speed = new_speed
-            print(f"🚀 {self.name} accelerated to {self.current_speed} km/h")
+            print(f"{self.name} accelerated to {self.current_speed} km/h")
         else:
             self.current_speed = self.max_speed
-            print(f"🚀 {self.name} reached maximum speed of {self.max_speed} km/h!")
+            print(f"{self.name} reached maximum speed of {self.max_speed} km/h!")
     
     def brake(self, decrement):
         """Brakes the vehicle"""
         new_speed = max(0, self.current_speed - decrement)
         self.current_speed = new_speed
         if new_speed > 0:
-            print(f"🛑 {self.name} braked to {self.current_speed} km/h")
+            print(f"{self.name} braked to {self.current_speed} km/h")
         else:
-            print(f"🛑 {self.name} stopped completely!")
+            print(f"{self.name} stopped completely!")
     
     def get_status(self):
         """Returns current vehicle status"""
-        return f"📊 {self.name}: Current speed: {self.current_speed} km/h (Max: {self.max_speed} km/h)"
+        return f"{self.name}: Current speed: {self.current_speed} km/h (Max: {self.max_speed} km/h)"
 
 
 class Car(Vehicle):
@@ -48,16 +48,16 @@ class Car(Vehicle):
     def move(self):
         """Specific implementation for car"""
         if self.current_speed > 0:
-            print(f"🚗 {self.name} is driving at {self.current_speed} km/h on the road!")
+            print(f"{self.name} is driving at {self.current_speed} km/h on the road!")
         else:
-            print(f"🚗 {self.name} is parked in the garage.")
+            print(f"{self.name} is parked in the garage.")
     
     def open_door(self, door_number):
         """Opens a specific car door"""
         if 1 <= door_number <= self.doors:
-            print(f"🚪 Door {door_number} of {self.name} was opened!")
+            print(f"Door {door_number} of {self.name} was opened!")
         else:
-            print(f"❌ Door {door_number} doesn't exist in {self.name}!")
+            print(f"Door {door_number} doesn't exist in {self.name}!")
 
 
 class Plane(Vehicle):
@@ -71,11 +71,11 @@ class Plane(Vehicle):
     def move(self):
         """Specific implementation for plane"""
         if self.current_speed > 0 and self.current_altitude > 0:
-            print(f"✈️ {self.name} is flying at {self.current_speed} km/h at {self.current_altitude}m altitude!")
+            print(f"{self.name} is flying at {self.current_speed} km/h at {self.current_altitude}m altitude!")
         elif self.current_speed > 0:
-            print(f"✈️ {self.name} is taking off on the runway at {self.current_speed} km/h!")
+            print(f"{self.name} is taking off on the runway at {self.current_speed} km/h!")
         else:
-            print(f"✈️ {self.name} is parked at the airport.")
+            print(f"{self.name} is parked at the airport.")
     
     def take_off(self):
         """Makes the plane take off"""
@@ -83,16 +83,16 @@ class Plane(Vehicle):
             self.current_altitude = min(self.max_altitude, 1000)
             print(f"🛫 {self.name} took off! Current altitude: {self.current_altitude}m")
         else:
-            print(f"⚠️ {self.name} needs at least 200 km/h to take off!")
+            print(f"{self.name} needs at least 200 km/h to take off!")
     
     def land(self):
         """Makes the plane land"""
         if self.current_altitude > 0:
             self.current_altitude = 0
             self.current_speed = 0
-            print(f"🛬 {self.name} landed successfully!")
+            print(f"{self.name} landed successfully!")
         else:
-            print(f"⚠️ {self.name} is already on the ground!")
+            print(f"{self.name} is already on the ground!")
 
 
 class Boat(Vehicle):
@@ -106,28 +106,28 @@ class Boat(Vehicle):
     def move(self):
         """Specific implementation for boat"""
         if self.current_speed > 0 and not self.anchored:
-            print(f"🚢 {self.name} is sailing at {self.current_speed} km/h on the sea!")
+            print(f"{self.name} is sailing at {self.current_speed} km/h on the sea!")
         elif self.current_speed > 0 and self.anchored:
-            print(f"🚢 {self.name} is anchored but with engine running!")
+            print(f"{self.name} is anchored but with engine running!")
         else:
-            print(f"🚢 {self.name} is anchored at the port.")
+            print(f"{self.name} is anchored at the port.")
     
     def raise_anchor(self):
         """Raises the boat's anchor"""
         if self.anchored:
             self.anchored = False
-            print(f"⚓ {self.name}'s anchor was raised! Boat free to sail!")
+            print(f"{self.name}'s anchor was raised! Boat free to sail!")
         else:
-            print(f"⚠️ {self.name} is not anchored!")
+            print(f"{self.name} is not anchored!")
     
     def drop_anchor(self):
         """Drops the boat's anchor"""
         if not self.anchored:
             self.anchored = True
             self.current_speed = 0
-            print(f"⚓ {self.name}'s anchor was dropped! Boat anchored.")
+            print(f"{self.name}'s anchor was dropped! Boat anchored.")
         else:
-            print(f"⚠️ {self.name} is already anchored!")
+            print(f"{self.name} is already anchored!")
 
 
 class Bicycle(Vehicle):
@@ -141,23 +141,23 @@ class Bicycle(Vehicle):
     def move(self):
         """Specific implementation for bicycle"""
         if self.current_speed > 0:
-            print(f"🚴 {self.name} is pedaling at {self.current_speed} km/h in gear {self.current_gear}!")
+            print(f"{self.name} is pedaling at {self.current_speed} km/h in gear {self.current_gear}!")
         else:
-            print(f"🚴 {self.name} is parked at the bike rack.")
+            print(f"{self.name} is parked at the bike rack.")
     
     def change_gear(self, new_gear):
         """Changes the bicycle's gear"""
         if 1 <= new_gear <= self.gears:
             self.current_gear = new_gear
-            print(f"⚙️ {self.name} changed to gear {self.current_gear}!")
+            print(f"{self.name} changed to gear {self.current_gear}!")
         else:
-            print(f"❌ Gear {new_gear} doesn't exist in {self.name}!")
+            print(f"Gear {new_gear} doesn't exist in {self.name}!")
 
 
 def demonstrate_polymorphism():
     """Demonstrates polymorphism between different vehicle types"""
     print("=" * 60)
-    print("🎭 ACTIVITY 2: POLYMORPHISM CHALLENGE!")
+    print("ACTIVITY 2: POLYMORPHISM CHALLENGE!")
     print("=" * 60)
     
     # Creating different types of vehicles
@@ -169,13 +169,13 @@ def demonstrate_polymorphism():
     # List of vehicles to demonstrate polymorphism
     vehicles = [car, plane, boat, bicycle]
     
-    print("🚗 CREATING VEHICLES:")
+    print("CREATING VEHICLES:")
     for vehicle in vehicles:
         print(vehicle.get_status())
     print()
     
     # Demonstrating polymorphism - all have move() method but behave differently
-    print("🎭 DEMONSTRATING POLYMORPHISM:")
+    print("DEMONSTRATING POLYMORPHISM:")
     print("All vehicles implement move() differently:")
     print()
     
@@ -185,7 +185,7 @@ def demonstrate_polymorphism():
         print()
     
     # Testing specific functionalities
-    print("🔧 TESTING SPECIFIC FUNCTIONALITIES:")
+    print("TESTING SPECIFIC FUNCTIONALITIES:")
     
     # Car
     car.accelerate(100)
@@ -214,7 +214,7 @@ def demonstrate_polymorphism():
     print()
     
     # Final demonstration of polymorphism
-    print("🎯 FINAL POLYMORPHISM DEMONSTRATION:")
+    print("FINAL POLYMORPHISM DEMONSTRATION:")
     print("Calling move() on all vehicles again:")
     print()
     
