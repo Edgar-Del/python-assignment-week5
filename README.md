@@ -25,11 +25,11 @@ python-assignment-week5/
 - `Smartphone`: Derived class with specific functionalities
 
 ### Features:
-- ✅ Power on/off device
-- ✅ Install/uninstall applications
-- ✅ Charge battery
-- ✅ Use applications (consumes battery)
-- ✅ Detailed device information
+- Power on/off device
+- Install/uninstall applications
+- Charge battery
+- Use applications (consumes battery)
+- Detailed device information
 
 ## Activity 2: Polymorphism Challenge!
 
@@ -46,12 +46,12 @@ python-assignment-week5/
 - `Bicycle`: Implements `move()` as "pedaling"
 
 ### Features:
-- ✅ Each vehicle has unique behavior in the `move()` method
-- ✅ Specific functionalities per vehicle type
-- ✅ Speed control and acceleration
-- ✅ Clear demonstration of polymorphism
+- Each vehicle has unique behavior in the `move()` method
+- Specific functionalities per vehicle type
+- Speed control and acceleration
+- Clear demonstration of polymorphism
 
-## 🚀 How to Run
+## How to Run
 
 ### Option 1: Run everything at once
 ```bash
@@ -67,7 +67,7 @@ python smartphone.py
 python polymorphism_challenge.py
 ```
 
-## 📚 OOP Concepts Demonstrated
+##OOP Concepts Demonstrated
 
 ### 1. **Inheritance**
 - `Smartphone` inherits from `ElectronicDevice`
