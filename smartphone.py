@@ -13,21 +13,21 @@ class ElectronicDevice:
         """Turns on the device"""
         if not self._powered_on:
             self._powered_on = True
-            print(f"🔌 {self._brand} {self._model} has been powered on!")
+            print(f"{self._brand} {self._model} has been powered on!")
         else:
-            print(f"⚠️ {self._brand} {self._model} is already powered on!")
+            print(f"{self._brand} {self._model} is already powered on!")
     
     def power_off(self):
         """Turns off the device"""
         if self._powered_on:
             self._powered_on = False
-            print(f"🔌 {self._brand} {self._model} has been powered off!")
+            print(f"{self._brand} {self._model} has been powered off!")
         else:
-            print(f"⚠️ {self._brand} {self._model} is already powered off!")
+            print(f"{self._brand} {self._model} is already powered off!")
     
     def get_info(self):
         """Returns device information"""
-        return f"📱 {self._brand} {self._model} ({self._year}) - Status: {'Powered On' if self._powered_on else 'Powered Off'}"
+        return f"{self._brand} {self._model} ({self._year}) - Status: {'Powered On' if self._powered_on else 'Powered Off'}"
 
 
 class Smartphone(ElectronicDevice):
@@ -48,36 +48,36 @@ class Smartphone(ElectronicDevice):
         """Installs an application"""
         if app_name not in self._installed_apps:
             self._installed_apps.append(app_name)
-            print(f"📱 App '{app_name}' installed successfully!")
+            print(f"App '{app_name}' installed successfully!")
         else:
-            print(f"⚠️ App '{app_name}' is already installed!")
+            print(f"App '{app_name}' is already installed!")
     
     def uninstall_app(self, app_name):
         """Uninstalls an application"""
         if app_name in self._installed_apps:
             self._installed_apps.remove(app_name)
-            print(f"🗑️ App '{app_name}' uninstalled!")
+            print(f"App '{app_name}' uninstalled!")
         else:
-            print(f"❌ App '{app_name}' not found!")
+            print(f"App '{app_name}' not found!")
     
     def charge_battery(self, percentage):
         """Charges the battery"""
         if 0 <= percentage <= 100:
             self._battery = min(100, self._battery + percentage)
-            print(f"🔋 Battery charged! Current level: {self._battery}%")
+            print(f"Battery charged! Current level: {self._battery}%")
         else:
-            print("❌ Invalid percentage for charging!")
+            print("Invalid percentage for charging!")
     
     def use_app(self, app_name):
         """Uses an application (consumes battery)"""
         if app_name in self._installed_apps:
             if self._battery > 0:
                 self._battery = max(0, self._battery - 5)
-                print(f"📱 Using '{app_name}'... Battery remaining: {self._battery}%")
+                print(f"Using '{app_name}'... Battery remaining: {self._battery}%")
             else:
-                print("🔋 Battery depleted! Charge the smartphone first!")
+                print("Battery depleted! Charge the smartphone first!")
         else:
-            print(f"❌ App '{app_name}' is not installed!")
+            print(f"App '{app_name}' is not installed!")
     
     def get_info(self):
         """Overrides parent method to show specific information"""
@@ -101,14 +101,14 @@ def demonstrate_smartphone():
     iphone = Smartphone("Apple", "iPhone 15", 2024, "iOS 17", 128, 8)
     samsung = Smartphone("Samsung", "Galaxy S24", 2024, "Android 14", 256, 12)
     
-    print("📱 Creating unique smartphones:")
+    print("Creating unique smartphones:")
     print(iphone.get_info())
     print()
     print(samsung.get_info())
     print()
     
     # Demonstrating functionalities
-    print("🔧 Testing functionalities:")
+    print("Testing functionalities:")
     iphone.power_on()
     iphone.install_app("Instagram")
     iphone.install_app("WhatsApp")
@@ -124,7 +124,7 @@ def demonstrate_smartphone():
     print()
     
     # Showing final state
-    print("📊 Final state of smartphones:")
+    print("Final state of smartphones:")
     print(iphone.get_info())
     print()
     print(samsung.get_info())
